@@ -4,8 +4,8 @@ import config from "../config/config";
 import Instruction from "@/types/instruction";
 import Ingredient from "@/types/ingredient";
 
-interface Props {
-  recipes: {
+interface Recipes {
+  data: {
     name: string;
     imageUrl: string;
     prepTime: number;
@@ -16,23 +16,23 @@ interface Props {
   }[];
 }
 
-const Index = ({ recipes }: Props) => {
+const Index = ({ data }: Recipes) => {
   return (
     <div className="index">
       <h1 className="heading index__heading">My Recipes</h1>
-
+      <div className="line-divide"></div>
       <div className="index__recipes">
-        {recipes.map((recipe) => {
+        {data.map((recipe) => {
           return (
             <div className="index__recipe-card" key={recipe._id}>
               <h1 className="index__recipe-card-title">{recipe.name}</h1>
               <Image
-                className="index___recipe-card-image"
                 src={recipe.imageUrl}
                 alt={recipe.name}
-                width="400"
-                height="200"
                 style={{ objectFit: "cover", borderRadius: "10px" }}
+                width={400}
+                height={200}
+                priority
               />
             </div>
           );
@@ -42,10 +42,10 @@ const Index = ({ recipes }: Props) => {
   );
 };
 
-Index.getInitialProps = async () => {
+export async function getServerSideProps() {
   const res = await fetch(`${config.PROD}`);
   const { data } = await res.json();
-  return { recipes: data };
-};
+  return { props: { data } };
+}
 
 export default Index;
