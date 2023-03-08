@@ -25,13 +25,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="nav__menu-link" href="/">
+          <Link className="nav__menu-link" href="/add">
             <AddCircleOutlineRoundedIcon style={{ fontSize: "2rem" }} />
             Add Recipe
           </Link>
         </li>
         <li>
-          <Link className="nav__menu-link" href="/">
+          <Link className="nav__menu-link" href="/discover">
             <SearchRoundedIcon style={{ fontSize: "2rem" }} />
             Discover
           </Link>

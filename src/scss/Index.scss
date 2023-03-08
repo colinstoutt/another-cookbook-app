@@ -4,10 +4,9 @@
   font-weight: 300;
 
   &__heading {
-    text-align: center;
+    text-align: left;
     font-weight: 300;
     font-size: 1.5rem;
-    margin: 2rem;
   }
 
   &__recipes {
@@ -35,10 +34,6 @@
       color: white;
       border-radius: 10px 10px 0 0;
       z-index: 10;
-    }
-    &-image {
-      object-fit: cover;
-      border-radius: 10px;
     }
   }
 }
