@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// creating type for ingredient schema
 type ingredient = {
   name: string;
   cal: number;
@@ -21,7 +22,7 @@ type recipe = {
   imageUrl: string;
   prepTime: number;
   cookTime: number;
-  ingedients: ingredient[];
+  ingredients: ingredient[];
   instructions: instruction[];
 };
 const recipeSchema = new mongoose.Schema<recipe>({
@@ -40,7 +41,7 @@ const recipeSchema = new mongoose.Schema<recipe>({
     type: Number,
     required: true,
   },
-  ingedients: {
+  ingredients: {
     type: [ingredientSchema],
     required: true,
   },
