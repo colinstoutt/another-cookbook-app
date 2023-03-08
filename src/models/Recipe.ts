@@ -1,31 +1,32 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 // creating type for ingredient schema
-type ingredient = {
+interface Ingredient {
   name: string;
   cal: number;
-};
-const ingredientSchema = new mongoose.Schema<ingredient>({
+}
+const ingredientSchema = new Schema<Ingredient>({
   name: { type: String, required: true },
   cal: { type: Number },
 });
 
-type instruction = {
+interface Instruction {
   step: string;
-};
-const instructionSchema = new mongoose.Schema<instruction>({
+}
+const instructionSchema = new Schema<Instruction>({
   step: { type: String, required: true },
 });
 
-type recipe = {
+interface Recipe {
   name: string;
   imageUrl: string;
   prepTime: number;
   cookTime: number;
-  ingredients: ingredient[];
-  instructions: instruction[];
-};
-const recipeSchema = new mongoose.Schema<recipe>({
+  ingredients: Ingredient[];
+  instructions: Instruction[];
+}
+
+const recipeSchema = new Schema<Recipe>({
   name: {
     type: String,
     required: true,
@@ -42,6 +43,7 @@ const recipeSchema = new mongoose.Schema<recipe>({
     required: true,
   },
   ingredients: {
+    // type: array of ingredients
     type: [ingredientSchema],
     required: true,
   },
@@ -52,4 +54,4 @@ const recipeSchema = new mongoose.Schema<recipe>({
 });
 
 export default mongoose.models.Recipe ||
-  mongoose.model<recipe>("Recipe", recipeSchema);
+  mongoose.model<Recipe>("Recipe", recipeSchema);
