@@ -38,19 +38,19 @@ const Navbar = () => {
     <>
       <nav className="nav">
         <RestaurantMenuRoundedIcon
-          style={{ fontSize: "2.5rem", color: "white" }}
+          style={{ fontSize: "3rem", color: "white" }}
           className="nav__icon"
         />
         {!toggleMenu ? (
           <MenuRoundedIcon
             onClick={handleToggleMenu}
-            style={{ fontSize: "2.5rem", color: "white" }}
+            style={{ fontSize: "3rem", color: "white" }}
             className="nav__icon"
           />
         ) : (
           <ClearRoundedIcon
             onClick={handleToggleMenu}
-            style={{ fontSize: "2.5rem", color: "white" }}
+            style={{ fontSize: "3rem", color: "white" }}
             className="nav__icon"
           />
         )}
