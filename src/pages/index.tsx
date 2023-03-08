@@ -19,22 +19,25 @@ interface Props {
 const Index = ({ recipes }: Props) => {
   return (
     <div className="index">
-      <h1 className="heading">My Recipes</h1>
-      {recipes.map((recipe) => {
-        return (
-          <div className="index__recipe-card" key={recipe._id}>
-            <h1 className="index__recipe-card-title">{recipe.name}</h1>
-            <Image
-              className="index___recipe-card-image"
-              src={recipe.imageUrl}
-              alt={recipe.name}
-              width="400"
-              height="200"
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-            />
-          </div>
-        );
-      })}
+      <h1 className="heading index__heading">My Recipes</h1>
+
+      <div className="index__recipes">
+        {recipes.map((recipe) => {
+          return (
+            <div className="index__recipe-card" key={recipe._id}>
+              <h1 className="index__recipe-card-title">{recipe.name}</h1>
+              <Image
+                className="index___recipe-card-image"
+                src={recipe.imageUrl}
+                alt={recipe.name}
+                width="400"
+                height="200"
+                style={{ objectFit: "cover", borderRadius: "10px" }}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

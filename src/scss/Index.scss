@@ -3,13 +3,28 @@
   font-size: 1.5rem;
   font-weight: 300;
 
+  &__heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 3rem;
+  }
+
+  &__recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: auto;
+  }
+
   &__recipe-card {
     position: relative;
     font-size: 1.2rem;
     background-color: white;
     height: 12rem;
+    max-width: 330px;
     border-radius: 10px;
-    margin-bottom: 3rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
     &-title {
