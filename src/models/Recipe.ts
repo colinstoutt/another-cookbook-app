@@ -19,7 +19,7 @@ const instructionSchema = new Schema<Instruction>({
 
 interface Recipe {
   name: string;
-  imageUrl?: string;
+  imageUrl: string;
   prepTime: number;
   cookTime: number;
   ingredients: Ingredient[];

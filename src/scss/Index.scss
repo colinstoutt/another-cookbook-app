@@ -1,0 +1,29 @@
+.index {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  &__recipe-card {
+    position: relative;
+    font-size: 1.2rem;
+    background-color: white;
+    height: 12rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    &-title {
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.536);
+      padding: 1rem;
+      color: white;
+      border-radius: 10px 10px 0 0;
+      z-index: 10;
+    }
+    &-image {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
