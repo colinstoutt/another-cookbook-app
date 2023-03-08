@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Grilled Chicken Salad",
+    "imageUrl": "https://i.imgur.com/xiI3urz.jpg",
+    "prepTime": 10,
+    "cookTime": 15,
+    "ingredients": [
+      {
+        "name": "boneless, skinless chicken breast",
+        "cal": 400
+      },
+      {
+        "name": "mixed greens",
+        "cal": 6
+      },
+      {
+        "name": "large tomato, chopped",
+        "cal": 33
+      },
+      {
+        "name": "red onion, sliced",
+        "cal": 20
+      },
+      {
+        "name": "cucumber, sliced",
+        "cal": 8
+      },
+      {
+        "name": "balsamic vinegar",
+        "cal": 28
+      },
+      {
+        "name": "olive oil",
+        "cal": 238
+      },
+      {
+        "name": "salt",
+        "cal": 0
+      },
+      {
+        "name": "pepper",
+        "cal": 0
+      }
+    ],
+    "instructions": [
+      {
+        "step": "Preheat grill to medium-high heat."
+      },
+      {
+        "step": "Season chicken breast with salt and pepper, and grill for 5-7 minutes per side or until cooked through."
+      },
+      {
+        "step": "Let chicken rest for 5 minutes, then slice into strips."
+      },
+      {
+        "step": "In a large bowl, toss together mixed greens, tomato, red onion, and cucumber."
+      },
+      {
+        "step": "In a small bowl, whisk together balsamic vinegar, olive oil, salt, and pepper."
+      },
+      {
+        "step": "Drizzle dressing over salad and toss to combine."
+      },
+      {
+        "step": "Divide salad among four plates and top each with sliced grilled chicken."
+      }
+    ]
+  },
+  {
+    "name": "Baked Salmon with Asparagus",
+    "imageUrl": "https://i.imgur.com/2ZtekI8.jpg",
+    "prepTime": 10,
+    "cookTime": 20,
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "cal": 200
+      },
+      {
+        "name": "asparagus spears",
+        "cal": 13
+      },
+      {
+        "name": "lemon, sliced",
+        "cal": 2
+      },
+      {
+        "name": "olive oil",
+        "cal": 238
+      },
+      {
+        "name": "salt",
+        "cal": 0
+      },
+      {
+        "name": "pepper",
+        "cal": 0
+      }
+    ],
+    "instructions": [
+      {
+        "step": "Preheat oven to 400°F."
+      },
+      {
+        "step": "Line a baking sheet with parchment paper."
+      },
+      {
+        "step": "Place salmon fillet in the center of the baking sheet."
+      },
+      {
+        "step": "Arrange asparagus spears around the salmon."
+      },
+      {
+        "step": "Drizzle everything with olive oil and season with salt and pepper."
+      },
+      {
+        "step": "Place lemon slices on top of the salmon."
+      },
+      {
+        "step": "Bake for 15-20 minutes, or until the salmon is cooked through and the asparagus is tender."
+      }
+    ]
+  },
+  {
+    "name": "Turkey and Veggie Stir Fry",
+    "imageUrl": "[img]https://i.imgur.com/pWawpT3.jpg[/img]",
+    "prepTime": 10,
+    "cookTime": 15,
+    "ingredients": [
+      {
+        "name": "ground turkey",
+        "cal": 170
+      },
+      {
+        "name": "green onion, sliced",
+        "cal": 44
+      },
+      {
+        "name": "broccoli florets",
+        "cal": 55
+      },
+      {
+        "name": "garlic, minced",
+        "cal": 4
+      },
+      {
+        "name": "low-sodium soy sauce",
+        "cal": 10
+      },
+      {
+        "name": "basmati rice",
+        "cal": 100
+      },
+      {
+        "name": "olive oil",
+        "cal": 119
+      },
+      {
+        "name": "salt",
+        "cal": 0
+      }
+    ],
+    "instructions": [
+      {
+        "step": "In a large skillet over medium-high heat, cook ground turkey until browned, breaking up any large chunks with a wooden spoon."
+      },
+      {
+        "step": "Add red bell pepper, yellow onion, broccoli florets, and sliced carrots to the skillet and cook until vegetables are tender, stirring occasionally."
+      },
+      {
+        "step": "Add minced garlic to the skillet and cook for an additional minute."
+      },
+      {
+        "step": "Drizzle low-sodium soy sauce over the top of the stir fry and toss to combine."
+      },
+      {
+        "step": "Serve hot with additional soy sauce and salt and pepper to taste."
+      }
+    ]
+  },
+  {
+    "name": "Quinoa and Veggie Stuffed Peppers",
+    "imageUrl": "[img]https://i.imgur.com/eYmG5OS.jpg[/img]",
+    "prepTime": 20,
+    "cookTime": 50,
+    "ingredients": [
+      {
+        "name": "bell peppers, any color",
+        "cal": 24
+      },
+      {
+        "name": "quinoa, cooked",
+        "cal": 222
+      },
+      {
+        "name": "black beans, drained and rinsed",
+        "cal": 120
+      },
+      {
+        "name": "corn kernels",
+        "cal": 77
+      },
+      {
+        "name": "diced tomatoes",
+        "cal": 22
+      },
+      {
+        "name": "green onions, sliced",
+        "cal": 5
+      },
+      {
+        "name": "low-fat cheddar cheese, shredded",
+        "cal": 60
+      },
+      {
+        "name": "olive oil",
+        "cal": 238
+      },
+      {
+        "name": "salt",
+        "cal": 0
+      },
+      {
+        "name": "pepper",
+        "cal": 0
+      }
+    ],
+    "instructions": [
+      {
+        "step": "Preheat oven to 375°F."
+      },
+      {
+        "step": "Cut the tops off the bell peppers and remove the seeds and membranes."
+      },
+      {
+        "step": "In a large bowl, combine cooked quinoa, black beans, corn kernels, diced tomatoes, and green onions. Mix well."
+      },
+      {
+        "step": "Season the mixture with salt and pepper, to taste."
+      },
+      {
+        "step": "Stuff each bell pepper with the quinoa mixture."
+      },
+      {
+        "step": "Sprinkle shredded cheese on top of each stuffed pepper."
+      },
+      {
+        "step": "Brush each pepper with a little bit of olive oil."
+      },
+      {
+        "step": "Place the stuffed peppers in a baking dish and bake for 45-50 minutes, or until the peppers are tender and the cheese is melted and golden brown."
+      },
+      {
+        "step": "Remove the peppers from the oven and let them cool for a few minutes before serving."
+      }
+    ]
+  },
+  {
+    "name": "Grilled Chicken and Vegetable Skewers",
+    "imageUrl": "[img]https://i.imgur.com/O6WmGmB.png[/img]",
+    "prepTime": 20,
+    "cookTime": 15,
+    "ingredients": [
+      {
+        "name": "boneless, skinless chicken breasts, cut into cubes",
+        "cal": 165
+      },
+      {
+        "name": "red bell pepper, seeded and cut into chunks",
+        "cal": 37
+      },
+      {
+        "name": "green bell pepper, seeded and cut into chunks",
+        "cal": 33
+      },
+      {
+        "name": "red onion, cut into chunks",
+        "cal": 46
+      },
+      {
+        "name": "cherry tomatoes",
+        "cal": 27
+      },
+      {
+        "name": "olive oil",
+        "cal": 238
+      },
+      {
+        "name": "salt",
+        "cal": 0
+      },
+      {
+        "name": "pepper",
+        "cal": 0
+      }
+    ],
+    "instructions": [
+      {
+        "step": "Soak wooden skewers in water for at least 30 minutes."
+      },
+      {
+        "step": "Preheat grill to medium-high heat."
+      },
+      {
+        "step": "Thread chicken, red and green bell peppers, red onion, and cherry tomatoes onto skewers, alternating ingredients."
+      },
+      {
+        "step": "Brush skewers with olive oil and season with salt and pepper."
+      },
+      {
+        "step": "Grill skewers for 10-12 minutes, turning occasionally, until chicken is cooked through and vegetables are tender and slightly charred."
+      },
+      {
+        "step": "Serve hot."
+      }
+    ]
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "imageUrl": "https://i.imgur.com/6qp4SHC.jpg",
+    "prepTime": 10,
+    "cookTime": 20,
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "cal": 100
+      },
+      {
+        "name": "bacon",
+        "cal": 400
+      },
+      {
+        "name": "parmesan cheese",
+        "cal": 100
+      },
+      {
+        "name": "eggs",
+        "cal": 80
+      }
+    ],
+    "instructions": [
+      {
+        "step": "Cook spaghetti according to package instructions"
+      },
+      {
+        "step": "Cook bacon in a skillet until crispy, then chop into small pieces"
+      },
+      {
+        "step": "In a mixing bowl, whisk together eggs and parmesan cheese"
+      },
+      {
+        "step": "When spaghetti is cooked, drain it and add it to the skillet with the bacon. Toss to combine."
+      },
+      {
+        "step": "Remove skillet from heat and immediately pour egg mixture over spaghetti. Toss quickly to coat evenly."
+      },
+      {
+        "step": "Serve hot and enjoy!"
+      }
+    ]
+  }
+]
