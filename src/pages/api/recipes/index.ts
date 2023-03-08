@@ -5,7 +5,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 // connect to mongoDb
 dbConnect();
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const recipesController = async (req: NextApiRequest, res: NextApiResponse) => {
   // destructure request to get api methods
   const { method } = req;
   // use switchcase to build controller
@@ -32,3 +32,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       break;
   }
 };
+
+export default recipesController;

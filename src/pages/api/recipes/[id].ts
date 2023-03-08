@@ -5,7 +5,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 // connect to mongoDb
 dbConnect();
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const recipeController = async (req: NextApiRequest, res: NextApiResponse) => {
   // destructure request to get api methods and specific object id
   const {
     query: { id },
@@ -48,3 +48,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       break;
   }
 };
+
+export default recipeController;
