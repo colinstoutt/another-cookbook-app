@@ -1,5 +1,5 @@
 // dynamic route
-import { dbConnect } from "@/utils/dbConnect";
+import dbConnect from "@/utils/dbConnect";
 import Recipe from "@/models/Recipe";
 import { NextApiRequest, NextApiResponse } from "next";
 // connect to mongoDb
