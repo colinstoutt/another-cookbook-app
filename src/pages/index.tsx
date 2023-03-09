@@ -3,7 +3,6 @@ import config from "../config/config";
 import Image from "next/image";
 import Instruction from "@/types/instruction";
 import Ingredient from "@/types/ingredient";
-import RecipeCard from "@/components/RecipeCard";
 
 interface Recipes {
   data: {
