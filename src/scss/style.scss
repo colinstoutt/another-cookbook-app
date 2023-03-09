@@ -1,4 +1,6 @@
 // style reset code
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -15,7 +17,7 @@
 
 body {
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: "roboto slab", sans-serif;
   background-color: #f8f8f8;
 }
 
