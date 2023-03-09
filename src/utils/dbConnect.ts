@@ -1,7 +1,8 @@
 import * as Mongoose from "mongoose";
 
 let db: Mongoose.Connection;
-export async function dbConnect() {
+
+export default async function dbConnect() {
   if (db) {
     return;
   }
