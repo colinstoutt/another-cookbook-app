@@ -1,11 +1,11 @@
 .index {
-  margin: 2rem;
+  margin: 7rem 2rem 2rem 2rem;
   font-size: 1.5rem;
   font-weight: 300;
 
   &__heading {
     text-align: left;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
   }
 
@@ -20,6 +20,7 @@
   &__recipe-card {
     position: relative;
     font-size: 1.2rem;
+    font-weight: 300;
     background-color: white;
     height: 12rem;
     max-width: 330px;

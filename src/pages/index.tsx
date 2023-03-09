@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import config from "../config/config";
 import Instruction from "@/types/instruction";
 import Ingredient from "@/types/ingredient";
+import RecipeCard from "@/components/RecipeCard";
 
 interface Recipes {
   data: {
@@ -23,19 +23,7 @@ const Index = ({ data }: Recipes) => {
       <div className="line-divide"></div>
       <div className="index__recipes">
         {data.map((recipe) => {
-          return (
-            <div className="index__recipe-card" key={recipe._id}>
-              <h1 className="index__recipe-card-title">{recipe.name}</h1>
-              <Image
-                src={recipe.imageUrl}
-                alt={recipe.name}
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-                width={400}
-                height={200}
-                priority
-              />
-            </div>
-          );
+          return <RecipeCard recipe={recipe} />;
         })}
       </div>
     </div>
