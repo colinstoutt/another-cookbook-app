@@ -1,17 +1,31 @@
 .nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(255, 185, 55);
   padding: 1rem 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 101;
+
+  &__li {
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 0.8rem 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
   &__menu {
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.355);
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.16);
     width: 100vw;
     height: 100vh;
     list-style: none;
@@ -23,12 +37,15 @@
 
     &-link {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      // padding: 0.8rem 2rem;
+      border-radius: 10px;
       gap: 0.3rem;
       text-decoration: none;
       color: black;
-      font-weight: 300;
+      // background-color: rgba(255, 255, 255, 0.1);
+      font-weight: 400;
       font-size: 2rem;
     }
   }

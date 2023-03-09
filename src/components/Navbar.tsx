@@ -18,22 +18,30 @@ const Navbar = () => {
   const Menu = () => {
     return (
       <ul className="nav__menu">
-        <li>
-          <Link className="nav__menu-link" href="/">
+        <li className="nav__li">
+          <Link onClick={handleToggleMenu} className="nav__menu-link" href="/">
             <SegmentRoundedIcon style={{ fontSize: "2rem" }} />
             My Recipes
           </Link>
         </li>
-        <li>
-          <Link className="nav__menu-link" href="/add">
+        <li className="nav__li">
+          <Link
+            onClick={handleToggleMenu}
+            className="nav__menu-link"
+            href="/add"
+          >
             <AddCircleOutlineRoundedIcon style={{ fontSize: "2rem" }} />
             Add Recipe
           </Link>
         </li>
-        <li>
-          <Link className="nav__menu-link" href="/discover">
+        <li className="nav__li">
+          <Link
+            onClick={handleToggleMenu}
+            className="nav__menu-link"
+            href="/discover"
+          >
             <SearchRoundedIcon style={{ fontSize: "2rem" }} />
-            Discover
+            Find Recipes
           </Link>
         </li>
       </ul>
