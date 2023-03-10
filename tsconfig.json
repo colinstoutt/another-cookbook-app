@@ -19,6 +19,6 @@
     },
     "noImplicitAny": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utils/test123.js"],
   "exclude": ["node_modules"]
 }
