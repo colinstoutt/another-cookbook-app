@@ -1,4 +1,4 @@
-import { dbConnect } from "@/utils/dbConnect";
+import dbConnect from "@/utils/dbConnect";
 import Recipe from "@/models/Recipe";
 import { NextApiRequest, NextApiResponse } from "next";
 import recipeSeed from "../../../data/recipes.json";
