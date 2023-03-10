@@ -5,7 +5,7 @@ import recipeSeed from "../../../data/recipes.json";
 
 dbConnect();
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const seed = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
   if (method === "GET") {
     try {
@@ -19,3 +19,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(400).json({ success: false });
   }
 };
+
+export default seed;

@@ -1,4 +1,4 @@
-import { dbConnect } from "@/utils/dbConnect";
+import dbConnect from "@/utils/dbConnect";
 import Recipe from "@/models/Recipe";
 // import special nextjs req and res
 import { NextApiRequest, NextApiResponse } from "next";

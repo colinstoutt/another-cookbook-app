@@ -2,12 +2,12 @@ import * as Mongoose from "mongoose";
 
 let db: Mongoose.Connection;
 
-export default async function dbConnect() {
+const dbConnect = async () => {
   if (db) {
     return;
   }
   // conenct to mongoDb
-  await Mongoose.connect(process.env.MONGODB_URI!);
+  await Mongoose.connect(process.env.MONGO_URI!);
 
   db = Mongoose.connection;
   // console msgs and errs
@@ -16,6 +16,8 @@ export default async function dbConnect() {
   )
     .on("close", () => console.log("Connection Closed"))
     .on("error", (error) => console.log(error));
-}
+};
 // remove strict query warning msg
 Mongoose.set("strictQuery", true);
+
+export default dbConnect;
