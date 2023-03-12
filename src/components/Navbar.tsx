@@ -8,7 +8,7 @@ import SegmentRoundedIcon from "@mui/icons-material/SegmentRounded";
 import Link from "next/link";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   function handleToggleMenu() {
@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link
             onClick={handleToggleMenu}
             className="nav__menu-link"
-            href="/add"
+            href="/new"
           >
             <AddCircleOutlineRoundedIcon style={{ fontSize: "2rem" }} />
             Add Recipe
