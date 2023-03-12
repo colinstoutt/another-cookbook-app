@@ -7,7 +7,7 @@ const dbConnect = async () => {
     return;
   }
   // conenct to mongoDb
-  await Mongoose.connect(process.env.MONGO_URI!);
+  await Mongoose.connect(process.env.MONGODB_URI!);
 
   db = Mongoose.connection;
   // console msgs and errs
