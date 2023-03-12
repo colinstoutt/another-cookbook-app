@@ -59,13 +59,6 @@ const Recipe = ({ data }: Props) => {
     );
   };
 
-  // const ingredientsString = Object.values(data.ingredients[0])
-  //   .join("")
-  //   .slice(0, -24);
-  // const instructionsString = Object.values(data.instructions[0])
-  //   .join("")
-  //   .slice(0, -24);
-
   return (
     <div className="show-recipe">
       {isDeleting ? (
@@ -92,10 +85,10 @@ const Recipe = ({ data }: Props) => {
               priority
             />
           </div>
-          {/* <h1 className="show-recipe__subheading">Ingredients</h1>
-          <p className="show-recipe__p">{ingredientsString}</p>
+          <h1 className="show-recipe__subheading">Ingredients</h1>
+          <p className="show-recipe__p">{data.ingredients}</p>
           <h1 className="show-recipe__subheading">Instructions</h1>
-          <p className="show-recipe__p">{instructionsString}</p> */}
+          <p className="show-recipe__p">{data.instructions}</p>
           {data.servings ? (
             <p className="show-recipe__serves">
               Serves: <span>{data.servings}</span>
@@ -120,9 +113,7 @@ const Recipe = ({ data }: Props) => {
 };
 
 export async function getServerSideProps({ query: { id } }: queryId) {
-  const res = await fetch(
-    `https://next-js-ts-cookbook-knejvs4f2-colinstoutt.vercel.app/api/recipes/${id}`
-  );
+  const res = await fetch(`http://localhost:3000/api/recipes/${id}`);
   const { data } = await res.json();
   return { props: { data } };
 }

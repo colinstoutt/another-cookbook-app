@@ -172,9 +172,7 @@ const EditRecipe = ({ data }: Props) => {
 };
 
 export async function getServerSideProps({ query: { id } }: queryId) {
-  const res = await fetch(
-    `https://next-js-ts-cookbook-knejvs4f2-colinstoutt.vercel.app/api/recipes/${id}`
-  );
+  const res = await fetch(`http://localhost:3000/api/recipes/${id}`);
   const { data } = await res.json();
   return { props: { data } };
 }

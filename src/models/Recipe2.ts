@@ -8,9 +8,10 @@ interface Recipe {
   servings: number;
   ingredients: string;
   instructions: string;
+  calPerServing: number;
 }
 
-const recipeNewSchema = new Schema<Recipe>({
+const recipe2Schema = new Schema<Recipe>({
   name: {
     type: String,
     required: true,
@@ -39,5 +40,5 @@ const recipeNewSchema = new Schema<Recipe>({
   },
 });
 
-export default mongoose.models.RecipeNew ||
-  mongoose.model<Recipe>("RecipeNew", recipeNewSchema);
+export default mongoose.models.Recipe2 ||
+  mongoose.model<Recipe>("Recipe2", recipe2Schema);
