@@ -15,6 +15,7 @@ const nextConfig = {
             key: "Access-Control-Allow-Methods",
             value: "GET, POST, PUT, DELETE",
           },
+          { key: "Referrer-Policy", value: "no-referrer-when-downgrade" },
         ],
       },
     ];
@@ -26,14 +27,6 @@ const nextConfig = {
         hostname: "i.imgur.com",
       },
     ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "http://localhost:3000/:path*", // Set this to the URL of your server
-      },
-    ];
   },
 };
 
