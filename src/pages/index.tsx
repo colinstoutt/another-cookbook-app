@@ -2,7 +2,6 @@ import Link from "next/link";
 import config from "../config/config";
 import Image from "next/image";
 import { useEffect } from "react";
-import { getRecipes } from "./api/fetchData";
 import { GetServerSideProps } from "next";
 
 interface Recipes {
@@ -20,10 +19,6 @@ interface Recipes {
 }
 
 const Index = ({ data }: Recipes) => {
-  useEffect(() => {
-    getRecipes();
-  }, []);
-
   return (
     <div className="index">
       <h1 className="heading index__heading">My Recipes</h1>
