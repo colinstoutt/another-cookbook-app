@@ -1,29 +1,14 @@
 import mongoose, { Schema } from "mongoose";
 
-// creating type for ingredient schema
-interface Ingredient {
-  name: string;
-  cal: number;
-}
-const ingredientSchema = new Schema<Ingredient>({
-  name: { type: String, required: true },
-  cal: { type: Number },
-});
-
-interface Instruction {
-  step: string;
-}
-const instructionSchema = new Schema<Instruction>({
-  step: { type: String, required: true },
-});
-
 interface Recipe {
   name: string;
   imageUrl: string;
   prepTime: number;
   cookTime: number;
-  ingredients: Ingredient[];
-  instructions: Instruction[];
+  servings: number;
+  ingredients: string;
+  instructions: string;
+  calPerServing: number;
 }
 
 const recipeSchema = new Schema<Recipe>({
@@ -42,13 +27,15 @@ const recipeSchema = new Schema<Recipe>({
     type: Number,
     required: true,
   },
+  servings: {
+    type: Number,
+  },
   ingredients: {
-    // type: array of ingredients
-    type: [ingredientSchema],
+    type: String,
     required: true,
   },
   instructions: {
-    type: [instructionSchema],
+    type: String,
     required: true,
   },
 });
