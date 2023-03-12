@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Grilled Chicken Salad",
+    "imageUrl": "https://i.imgur.com/xiI3urz.jpg",
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": 4,
+    "ingredients": "Boneless, skinless chicken breast, mixed greens, large tomato (chopped), red onion (sliced), cucumber (sliced), balsamic vinegar, olive oil, salt, pepper",
+    "instructions": "Preheat grill to medium-high heat. Season chicken breast with salt and pepper, and grill for 5-7 minutes per side or until cooked through. Let chicken rest for 5 minutes, then slice into strips. In a large bowl, toss together mixed greens, tomato, red onion, and cucumber. In a small bowl, whisk together balsamic vinegar, olive oil, salt, and pepper. Drizzle dressing over salad and toss to combine. Divide salad among four plates and top each with sliced grilled chicken.",
+    "calPerServing": 450
+  },
+  {
+    "name": "Baked Salmon with Asparagus",
+    "imageUrl": "https://i.imgur.com/2ZtekI8.jpg",
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "ingredients": "Salmon fillet, asparagus spears, lemon (sliced), olive oil, salt, pepper",
+    "instructions": "Preheat oven to 400°F. Line a baking sheet with parchment paper. Place salmon fillet in the center of the baking sheet. Arrange asparagus spears around the salmon. Drizzle everything with olive oil and season with salt and pepper. Place lemon slices on top of the salmon. Bake for 15-20 minutes, or until the salmon is cooked through and the asparagus is tender.",
+    "calPerServing": 300
+  },
+  {
+    "name": "Turkey and Veggie Stir Fry",
+    "imageUrl": "https://i.imgur.com/pWawpT3.jpg",
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": 4,
+    "ingredients": "Ground turkey, Green onion sliced, Broccoli florets, Garlic minced, Low-sodium soy sauce, Basmati rice, Olive oil, Salt",
+    "instructions": "In a large skillet over medium-high heat, cook ground turkey until browned, breaking up any large chunks with a wooden spoon. Add red bell pepper, yellow onion, broccoli florets, and sliced carrots to the skillet and cook until vegetables are tender, stirring occasionally. Add minced garlic to the skillet and cook for an additional minute. Drizzle low-sodium soy sauce over the top of the stir fry and toss to combine. Serve hot with additional soy sauce and salt and pepper to taste."
+  },
+  {
+    "name": "Quinoa and Veggie Stuffed Peppers",
+    "imageUrl": "https://i.imgur.com/eYmG5OS.jpg",
+    "prepTime": 20,
+    "cookTime": 50,
+    "servings": 4,
+    "ingredients": "Bell peppers any color, Quinoa cooked, Black beans drained and rinsed, Corn kernels, Diced tomatoes, Green onions sliced, Low-fat cheddar cheese shredded, Olive oil, Salt, Pepper",
+    "instructions": "Preheat oven to 375°F. Cut the tops off the bell peppers and remove the seeds and membranes. In a large bowl, combine cooked quinoa, black beans, corn kernels, diced tomatoes, and green onions. Mix well. Season the mixture with salt and pepper, to taste. Stuff each bell pepper with the quinoa mixture. Sprinkle shredded cheese on top of each stuffed pepper. Brush each pepper with a little bit of olive oil. Place the stuffed peppers in a baking dish and bake for 45-50 minutes, or until the peppers are tender and the cheese is melted and golden brown. Remove the peppers from the oven and let them cool for a few minutes before serving."
+  },
+  {
+    "name": "Grilled Chicken and Vegetable Skewers",
+    "imageUrl": "https://i.imgur.com/O6WmGmB.png",
+    "prepTime": 20,
+    "cookTime": 15,
+    "servings": 4,
+    "ingredients": "Boneless, skinless chicken breasts, cut into cubes, Red bell pepper, seeded and cut into chunks, Green bell pepper, seeded and cut into chunks, Red onion, cut into chunks, Cherry tomatoes, Olive oil, Salt, Pepper",
+    "instructions": "Soak wooden skewers in water for at least 30 minutes., Preheat grill to medium-high heat., Thread chicken, red and green bell peppers, red onion, and cherry tomatoes onto skewers, alternating ingredients., Brush skewers with olive oil and season with salt and pepper., Grill skewers for 10-12 minutes, turning occasionally, until chicken is cooked through and vegetables are tender and slightly charred., Serve hot."
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "imageUrl": "https://i.imgur.com/6qp4SHC.jpg",
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "ingredients": "Spaghetti, Bacon, Parmesan cheese, Eggs",
+    "instructions": "Cook spaghetti according to package instructions, Cook bacon in a skillet until crispy, then chop into small pieces, In a mixing bowl, whisk together eggs and parmesan cheese, When spaghetti is cooked, drain it and add it to the skillet with the bacon. Toss to combine., Remove skillet from heat and immediately pour egg mixture over spaghetti. Toss quickly to coat evenly., Serve hot and enjoy!"
+  }
+]
