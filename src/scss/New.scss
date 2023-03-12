@@ -1,0 +1,21 @@
+.add-recipe {
+  margin: 7rem 2rem 2rem 2rem;
+
+  &__input {
+    margin: 0.5rem 0 1rem 0;
+  }
+}
+
+.list-form {
+  &__inputs {
+    display: flex;
+  }
+
+  &__add-btn {
+    margin-bottom: 1rem;
+  }
+  &__remove-btn {
+    color: red;
+    margin-top: 0.5rem;
+  }
+}
