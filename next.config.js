@@ -4,13 +4,20 @@ const nextConfig = {
   headers: [
     {
       source: "/api/recipes/:id*",
-      headers: [
-        { key: "Access-Control-Allow-Origin", value: "*" },
-        {
-          key: "Access-Control-Allow-Methods",
-          value: "GET, POST, PUT, DELETE",
-        },
-      ],
+      headers: async () => {
+        return [
+          {
+            source: "/api/*",
+            headers: [
+              { key: "Access-Control-Allow-Origin", value: "*" },
+              {
+                key: "Access-Control-Allow-Methods",
+                value: "GET, POST, PUT, DELETE",
+              },
+            ],
+          },
+        ];
+      },
     },
   ],
   images: {
