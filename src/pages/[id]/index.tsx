@@ -63,9 +63,9 @@ const Recipe = ({ data }: Props) => {
         />
       </div>
       <h1 className="show-recipe__subheading">Ingredients</h1>
-      <p>{ingredientsString}</p>
+      <p className="show-recipe__p">{ingredientsString}</p>
       <h1 className="show-recipe__subheading">Instructions</h1>
-      <p>{instructionsString}</p>
+      <p className="show-recipe__p">{instructionsString}</p>
       {data.servings ? (
         <p className="show-recipe__serves">
           Serves: <span>{data.servings}</span>
