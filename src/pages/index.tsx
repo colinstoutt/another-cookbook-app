@@ -45,9 +45,13 @@ const Index = ({ data }: Recipes) => {
 };
 
 export async function getServerSideProps() {
-  const res = await fetch(`${config.PROD}`);
-  const { data } = await res.json();
-  return { props: { data } };
+  try {
+    const res = await fetch(`${config.PROD}`);
+    const { data } = await res.json();
+    return { props: { data } };
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default Index;
