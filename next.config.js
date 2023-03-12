@@ -1,25 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  headers: [
-    {
-      source: "/api/recipes/:id*",
-      headers: async () => {
-        return [
+  async headers() {
+    return [
+      {
+        source: "/api/recipes/:id*",
+        headers: [
+          { key: "Access-Control-Allow-Credentials", value: "true" },
           {
-            source: "/api/*",
-            headers: [
-              { key: "Access-Control-Allow-Origin", value: "*" },
-              {
-                key: "Access-Control-Allow-Methods",
-                value: "GET, POST, PUT, DELETE",
-              },
-            ],
+            key: "Access-Control-Allow-Origin",
+            value: "http://localhost:3000",
           },
-        ];
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET, POST, PUT, DELETE",
+          },
+        ],
       },
-    },
-  ],
+    ];
+  },
   images: {
     remotePatterns: [
       {
