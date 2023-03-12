@@ -51,10 +51,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav className="nav">
-        <RestaurantMenuRoundedIcon
-          style={{ fontSize: "3rem", color: "white" }}
-          className="nav__icon"
-        />
+        <Link href="/">
+          <RestaurantMenuRoundedIcon
+            style={{ fontSize: "3rem", color: "white" }}
+            className="nav__icon"
+          />
+        </Link>
         {!toggleMenu ? (
           <MenuRoundedIcon
             onClick={handleToggleMenu}
