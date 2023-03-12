@@ -31,4 +31,19 @@
       z-index: 10;
     }
   }
+  &__edit {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.381);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.46);
+    &:hover {
+      cursor: pointer;
+      border: 1px solid white;
+    }
+  }
 }

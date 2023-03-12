@@ -36,6 +36,9 @@ const Index = ({ data }: Recipes) => {
                   priority
                 />
               </Link>
+              <Link href={`/${recipe._id}/edit`}>
+                <button className="index__edit">Edit</button>
+              </Link>
             </div>
           );
         })}
