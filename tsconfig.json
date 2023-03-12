@@ -14,11 +14,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    //// added compiler settings
+    // "noImplicitAny": true,
+
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "noImplicitAny": true
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utils/test123.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/models/Recipe.ts",
+    "src/pages/api/auth/[...nextauth].js"
+  ],
   "exclude": ["node_modules"]
 }

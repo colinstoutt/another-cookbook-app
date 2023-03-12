@@ -1,7 +1,8 @@
 // dynamic route
 import dbConnect from "@/utils/dbConnect";
-import Recipe from "@/models/Recipe";
+import RecipeNew from "@/models/RecipeNew";
 import { NextApiRequest, NextApiResponse } from "next";
+import withNextCors from "../../../../nextCors";
 
 // connect to mongoDb
 dbConnect();
@@ -16,7 +17,7 @@ const recipeController = async (req: NextApiRequest, res: NextApiResponse) => {
   switch (method) {
     case "GET":
       try {
-        const recipe = await Recipe.findById(id);
+        const recipe = await RecipeNew.findById(id);
         console.log(method);
         if (!recipe) return res.status(400).json({ success: false });
         res.status(200).json({ success: true, data: recipe });
@@ -26,7 +27,7 @@ const recipeController = async (req: NextApiRequest, res: NextApiResponse) => {
       break;
     case "PUT":
       try {
-        const recipe = await Recipe.findByIdAndUpdate(id, req.body, {
+        const recipe = await RecipeNew.findByIdAndUpdate(id, req.body, {
           new: true,
           runValidators: true,
         });
@@ -37,7 +38,7 @@ const recipeController = async (req: NextApiRequest, res: NextApiResponse) => {
       break;
     case "DELETE":
       try {
-        const deletedrecipe = await Recipe.deleteOne({ _id: id });
+        const deletedrecipe = await RecipeNew.deleteOne({ _id: id });
         if (!deletedrecipe) return res.status(400).json({ success: false });
         res.status(200).json({ success: true, data: {} });
       } catch (error) {
@@ -50,4 +51,4 @@ const recipeController = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default recipeController;
+export default withNextCors(recipeController);

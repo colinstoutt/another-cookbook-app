@@ -1,5 +1,5 @@
 import dbConnect from "@/utils/dbConnect";
-import Recipe from "@/models/Recipe";
+import RecipeNew from "@/models/RecipeNew";
 import { NextApiRequest, NextApiResponse } from "next";
 import recipeSeed from "../../../data/recipes2.json";
 
@@ -9,7 +9,7 @@ const seed = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
   if (method === "GET") {
     try {
-      const recipes = await Recipe.create(recipeSeed);
+      const recipes = await RecipeNew.create(recipeSeed);
       // display success message and data
       res.status(200).json({ success: true, data: recipes });
     } catch (error) {

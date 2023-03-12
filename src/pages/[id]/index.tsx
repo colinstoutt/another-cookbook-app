@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import config from "@/config/config";
 import queryId from "@/types/queryId";
+import NextCors from "nextjs-cors";
 
 interface Props {
   data: {
@@ -14,7 +15,6 @@ interface Props {
     servings: number;
     ingredients: string;
     instructions: string;
-    calPerServing: number;
   };
 }
 
@@ -22,6 +22,7 @@ const Recipe = ({ data }: Props) => {
   const [confirm, setConfirm] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const router = useRouter();
+  console.log(data);
 
   useEffect(() => {
     if (isDeleting) {
@@ -31,9 +32,8 @@ const Recipe = ({ data }: Props) => {
 
   const deleteRecipe = async () => {
     const recipeId = router.query.id;
-
     try {
-      await fetch(`${config.PROD}${recipeId}`, {
+      await fetch(`http://localhost:3000/api/recipes/${recipeId}`, {
         method: "DELETE",
       });
       router.push("/");
@@ -59,12 +59,12 @@ const Recipe = ({ data }: Props) => {
     );
   };
 
-  const ingredientsString = Object.values(data.ingredients[0])
-    .join("")
-    .slice(0, -24);
-  const instructionsString = Object.values(data.instructions[0])
-    .join("")
-    .slice(0, -24);
+  // const ingredientsString = Object.values(data.ingredients[0])
+  //   .join("")
+  //   .slice(0, -24);
+  // const instructionsString = Object.values(data.instructions[0])
+  //   .join("")
+  //   .slice(0, -24);
 
   return (
     <div className="show-recipe">
@@ -92,10 +92,10 @@ const Recipe = ({ data }: Props) => {
               priority
             />
           </div>
-          <h1 className="show-recipe__subheading">Ingredients</h1>
+          {/* <h1 className="show-recipe__subheading">Ingredients</h1>
           <p className="show-recipe__p">{ingredientsString}</p>
           <h1 className="show-recipe__subheading">Instructions</h1>
-          <p className="show-recipe__p">{instructionsString}</p>
+          <p className="show-recipe__p">{instructionsString}</p> */}
           {data.servings ? (
             <p className="show-recipe__serves">
               Serves: <span>{data.servings}</span>
@@ -120,7 +120,9 @@ const Recipe = ({ data }: Props) => {
 };
 
 export async function getServerSideProps({ query: { id } }: queryId) {
-  const res = await fetch(`${config.PROD}${id}`);
+  const res = await fetch(
+    `https://next-js-ts-cookbook-knejvs4f2-colinstoutt.vercel.app/api/recipes/${id}`
+  );
   const { data } = await res.json();
   return { props: { data } };
 }

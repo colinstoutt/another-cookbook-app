@@ -1,29 +1,49 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import config from "@/config/config";
+import queryId from "@/types/queryId";
+// import { Formik, Form } from "formik";
+// import IngredientInputs from "@/components/IngredientInputs";
+// import InstructionInputs from "@/components/InstructionInputs";
 
-const AddRecipe = () => {
+interface Props {
+  data: {
+    _id: string;
+    name: string;
+    imageUrl: string;
+    prepTime: number;
+    cookTime: number;
+    servings: number;
+    ingredients: string;
+    instructions: string;
+    calPerServing: number;
+  };
+}
+
+const EditRecipe = ({ data }: Props) => {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({
-    name: "",
-    imageUrl: "",
-    prepTime: "",
-    cookTime: "",
-    servings: "",
-    ingredients: "",
-    instructions: "",
+    name: data.name,
+    imageUrl: data.imageUrl,
+    prepTime: data.prepTime,
+    cookTime: data.cookTime,
+    servings: data.servings,
+    ingredients: data.ingredients,
+    instructions: data.instructions,
+    calPerServing: data.calPerServing,
   });
 
   useEffect(() => {
     if (isSubmitting) {
-      createRecipe();
+      updateRecipe();
     }
   }, [isSubmitting]);
 
-  const createRecipe = async () => {
+  const updateRecipe = async () => {
     try {
-      await fetch("http://localhost:3000/api/recipes", {
-        method: "POST",
+      await fetch("http://localhost:3000/api/recipes/", {
+        method: "PUT",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -48,11 +68,19 @@ const AddRecipe = () => {
       [e.target.name]: e.target.value,
     }));
   };
+  //   const handleChangeTextarea = (
+  //     e: React.ChangeEvent<HTMLTextAreaElement>
+  //   ): void => {
+  //     setForm((prev) => ({
+  //       ...prev,
+  //       [e.target.name]: e.target.value,
+  //     }));
+  //   };
 
   return (
     <div className="add-recipe">
       <div>
-        <h1 className="heading">Add Recipe</h1>
+        <h1 className="heading">Edit Recipe</h1>
         <div className="line-divide"></div>
         {isSubmitting ? (
           <h1>Loading...</h1>
@@ -63,6 +91,7 @@ const AddRecipe = () => {
               className="add-recipe__input"
               type="text"
               name="name"
+              value={form.name}
               onChange={handleChange}
               required
             />
@@ -73,6 +102,7 @@ const AddRecipe = () => {
               className="add-recipe__input"
               type="text"
               name="imageUrl"
+              value={form.imageUrl}
               onChange={handleChange}
             />
             <br />
@@ -84,6 +114,7 @@ const AddRecipe = () => {
               className="add-recipe__input"
               type="number"
               name="prepTime"
+              value={form.prepTime}
               onChange={handleChange}
               required
             />
@@ -96,6 +127,7 @@ const AddRecipe = () => {
               className="add-recipe__input"
               type="number"
               name="cookTime"
+              value={form.cookTime}
               onChange={handleChange}
               required
             />
@@ -106,6 +138,7 @@ const AddRecipe = () => {
               className="add-recipe__input"
               type="number"
               name="servings"
+              value={form.servings}
               onChange={handleChange}
               required
             />
@@ -115,6 +148,7 @@ const AddRecipe = () => {
             <input
               className="add-recipe__input"
               name="ingredients"
+              value={form.ingredients}
               onChange={handleChange}
               required
             />
@@ -124,6 +158,7 @@ const AddRecipe = () => {
             <input
               className="add-recipe__input"
               name="instructions"
+              value={form.instructions}
               onChange={handleChange}
               required
             />
@@ -136,4 +171,12 @@ const AddRecipe = () => {
   );
 };
 
-export default AddRecipe;
+export async function getServerSideProps({ query: { id } }: queryId) {
+  const res = await fetch(
+    `https://next-js-ts-cookbook-knejvs4f2-colinstoutt.vercel.app/api/recipes/${id}`
+  );
+  const { data } = await res.json();
+  return { props: { data } };
+}
+
+export default EditRecipe;
