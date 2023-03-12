@@ -1,0 +1,8 @@
+{
+  "headers": [
+    {
+      "source": "/api/recipes/:path*",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ]
+}
