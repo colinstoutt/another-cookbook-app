@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import config from "@/config/config";
-import queryId from "@/types/queryId";
+import { GetServerSideProps } from "next";
 // import { Formik, Form } from "formik";
 // import IngredientInputs from "@/components/IngredientInputs";
 // import InstructionInputs from "@/components/InstructionInputs";
@@ -19,6 +19,9 @@ interface Props {
     calPerServing: number;
   };
 }
+type QueryParams = {
+  id: string;
+};
 
 const EditRecipe = ({ data }: Props) => {
   const router = useRouter();
@@ -41,8 +44,10 @@ const EditRecipe = ({ data }: Props) => {
   }, [isSubmitting]);
 
   const updateRecipe = async () => {
+    const recipeId = router.query.id;
+
     try {
-      await fetch("http://localhost:3000/api/recipes/", {
+      await fetch(`http://localhost:3000/api/recipes/${recipeId}`, {
         method: "PUT",
         headers: {
           Accept: "application/json",
@@ -171,10 +176,43 @@ const EditRecipe = ({ data }: Props) => {
   );
 };
 
-export async function getServerSideProps({ query: { id } }: queryId) {
-  const res = await fetch(`http://localhost:3000/api/recipes/${id}`);
-  const { data } = await res.json();
-  return { props: { data } };
-}
+// export async function getServerSideProps({ query: { id } }: queryId) {
+//   const res = await fetch(
+//     `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
+//   );
+//   const { data } = await res.json();
+//   return { props: { data } };
+// }
+// export const getServerSideProps: GetServerSideProps = async ({
+//   query: { id },
+// }: queryId) => {
+//   try {
+//     const res = await fetch(
+//       "https://next-js-ts-cookbook.vercel.app/api/recipes/"
+//     );
+//     const { data } = await res.json();
+//     return { props: { data } };
+//   } catch (error) {
+//     console.log(error);
+//     return { props: { data: null } };
+//   }
+// };
+
+export const getServerSideProps: GetServerSideProps<
+  Props,
+  QueryParams
+> = async ({ query }) => {
+  const { id } = query;
+  try {
+    const res = await fetch(
+      `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
+    );
+    const { data } = await res.json();
+    return { props: { data } };
+  } catch (error) {
+    console.log(error);
+    return { props: { data: null } };
+  }
+};
 
 export default EditRecipe;

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import config from "../config/config";
 import Image from "next/image";
+import { useEffect } from "react";
+import { getRecipes } from "./api/fetchData";
+import { GetServerSideProps } from "next";
 
 interface Recipes {
   data: {
@@ -17,6 +20,10 @@ interface Recipes {
 }
 
 const Index = ({ data }: Recipes) => {
+  useEffect(() => {
+    getRecipes();
+  }, []);
+
   return (
     <div className="index">
       <h1 className="heading index__heading">My Recipes</h1>
@@ -47,14 +54,17 @@ const Index = ({ data }: Recipes) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/recipes");
+    const res = await fetch(
+      "https://next-js-ts-cookbook.vercel.app/api/recipes/"
+    );
     const { data } = await res.json();
     return { props: { data } };
   } catch (error) {
     console.log(error);
+    return { props: { data: null } };
   }
-}
+};
 
 export default Index;
