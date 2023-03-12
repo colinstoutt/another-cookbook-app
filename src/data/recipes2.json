@@ -6,7 +6,42 @@
     "cookTime": 15,
     "servings": 4,
     "ingredients": "Boneless, skinless chicken breast, mixed greens, large tomato (chopped), red onion (sliced), cucumber (sliced), balsamic vinegar, olive oil, salt, pepper",
-    "instructions": "Preheat grill to medium-high heat. Season chicken breast with salt and pepper, and grill for 5-7 minutes per side or until cooked through. Let chicken rest for 5 minutes, then slice into strips. In a large bowl, toss together mixed greens, tomato, red onion, and cucumber. In a small bowl, whisk together balsamic vinegar, olive oil, salt, and pepper. Drizzle dressing over salad and toss to combine. Divide salad among four plates and top each with sliced grilled chicken.",
-    "calPerServing": 450
+    "instructions": "Preheat grill to medium-high heat. Season chicken breast with salt and pepper, and grill for 5-7 minutes per side or until cooked through. Let chicken rest for 5 minutes, then slice into strips. In a large bowl, toss together mixed greens, tomato, red onion, and cucumber. In a small bowl, whisk together balsamic vinegar, olive oil, salt, and pepper. Drizzle dressing over salad and toss to combine. Divide salad among four plates and top each with sliced grilled chicken."
+  },
+  {
+    "name": "Baked Salmon with Asparagus",
+    "imageUrl": "https://i.imgur.com/2ZtekI8.jpg",
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": "4",
+    "ingredients": "4 salmon fillets, 1 bunch asparagus, 2 tbsp olive oil, salt, pepper, lemon wedges",
+    "instructions": "1. Preheat oven to 400°F (200°C). \n2. Place salmon fillets and asparagus on a baking sheet. \n3. Drizzle with olive oil and season with salt and pepper. \n4. Bake for 20 minutes, or until salmon is cooked through. \n5. Serve with lemon wedges."
+  },
+  {
+    "name": "Turkey and Veggie Stir Fry",
+    "imageUrl": "https://i.imgur.com/pWawpT3.jpg",
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": "4",
+    "ingredients": "1 lb ground turkey, 2 bell peppers, 1 onion, 1 zucchini, 1 tbsp olive oil, 1/4 cup soy sauce, 2 tbsp honey, 1 tsp garlic powder",
+    "instructions": "1. In a large skillet, heat olive oil over medium-high heat. \n2. Add ground turkey and cook until browned. \n3. Add chopped bell peppers, onion, and zucchini. \n4. In a small bowl, whisk together soy sauce, honey, and garlic powder. \n5. Pour sauce over turkey and vegetables and stir to combine. \n6. Cook for 5-7 minutes, or until vegetables are tender. \n7. Serve hot."
+  },
+  {
+    "name": "Quinoa and Veggie Stuffed Peppers",
+    "imageUrl": "https://i.imgur.com/eYmG5OS.jpg",
+    "prepTime": 20,
+    "cookTime": 50,
+    "servings": "6",
+    "ingredients": "6 bell peppers, 1 cup quinoa, 1 can black beans, 1 can corn, 1 onion, 2 cloves garlic, 2 tbsp olive oil, 1 tsp chili powder, 1/2 tsp cumin, salt, pepper, shredded cheddar cheese",
+    "instructions": "1. Preheat oven to 375°F (190°C). \n2. Cook quinoa according to package directions. \n3. In a large skillet, heat olive oil over medium-high heat. \n4. Add chopped onion and garlic and cook until soft. \n5. Add black beans, corn, chili powder, cumin, salt, and pepper. \n6. Stir in cooked quinoa. \n7. Cut off the tops of the bell peppers and remove the seeds. \n8. Stuff each pepper with the quinoa and vegetable mixture. \n9. Place the stuffed peppers in a baking dish and top with shredded cheddar cheese. \n10. Bake for 30-35 minutes, or until peppers are tender and cheese is melted."
+  },
+  {
+    "name": "Grilled Chicken and Vegetable Skewers",
+    "imageUrl": "https://i.imgur.com/O6WmGmB.png",
+    "prepTime": 20,
+    "cookTime": 15,
+    "servings": "4",
+    "ingredients": "4 chicken breasts, 2 bell peppers, 1 red onion, 1 zucchini, 1/4 cup olive oil, 1/4 cup balsamic vinegar, 1 tsp garlic powder, 1 tsp dried oregano, salt and pepper to taste",
+    "instructions": "1. Preheat grill to medium-high heat.\n2. Cut chicken breasts into bite-sized pieces.\n3. Cut bell peppers, red onion, and zucchini into bite-sized pieces.\n4. Thread chicken and vegetables onto skewers.\n5. In a small bowl, whisk together olive oil, balsamic vinegar, garlic powder, oregano, salt, and pepper.\n6. Brush skewers with the olive oil mixture.\n7. Grill skewers for 10-15 minutes, or until chicken is cooked through and vegetables are tender.\n8. Serve hot."
   }
 ]
