@@ -49,6 +49,15 @@ const AddRecipe = () => {
     }));
   };
 
+  const handleChangeTextarea = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <div className="add-recipe">
       <div>
@@ -112,23 +121,29 @@ const AddRecipe = () => {
             <br />
             <label>Ingredients</label>
             <br />
-            <input
+            <textarea
               className="add-recipe__input"
+              rows={5}
+              cols={30}
               name="ingredients"
-              onChange={handleChange}
+              onChange={handleChangeTextarea}
               required
             />
             <br />
             <label>Instructions</label>
             <br />
-            <input
+            <textarea
               className="add-recipe__input"
+              rows={5}
+              cols={30}
               name="instructions"
-              onChange={handleChange}
+              onChange={handleChangeTextarea}
               required
             />
             <br />
-            <button type="submit">Submit</button>
+            <button className="add-recipe__submit" type="submit">
+              Submit
+            </button>
           </form>
         )}
       </div>

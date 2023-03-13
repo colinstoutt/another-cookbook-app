@@ -168,7 +168,9 @@ const EditRecipe = ({ data }: Props) => {
               required
             />
             <br />
-            <button type="submit">Submit</button>
+            <button className="add-recipe__submit" type="submit">
+              Submit
+            </button>
           </form>
         )}
       </div>
