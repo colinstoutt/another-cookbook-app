@@ -53,8 +53,8 @@ const Recipe = ({ data }: Props) => {
       <div className="show-recipe__confirm">
         <h1>Are you sure?</h1>
         <div className="show-recipe__confirm-btns">
-          <button onClick={() => setConfirm(false)}>Cancel</button>
-          <button onClick={handleDelete}>Delete</button>
+          <button className='show-recipe__confirm-btns-cancel' onClick={() => setConfirm(false)}>Cancel</button>
+          <button className='show-recipe__confirm-btns-delete' onClick={handleDelete}>Delete</button>
         </div>
       </div>
     );
