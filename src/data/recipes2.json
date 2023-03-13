@@ -1,7 +1,7 @@
 [
   {
     "name": "Grilled Chicken Salad",
-    "imageUrl": "https://i.imgur.com/xiI3urz.jpg",
+    "imageUrl": "https://i.imgur.com/K98Ao28.jpg",
     "prepTime": 10,
     "cookTime": 15,
     "servings": 4,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Baked Salmon with Asparagus",
-    "imageUrl": "https://i.imgur.com/2ZtekI8.jpg",
+    "imageUrl": "https://i.imgur.com/2XGJfTh.jpg",
     "prepTime": 10,
     "cookTime": 20,
     "servings": "4",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Turkey and Veggie Stir Fry",
-    "imageUrl": "https://i.imgur.com/pWawpT3.jpg",
+    "imageUrl": "https://i.imgur.com/yfiQHf6.jpg",
     "prepTime": 10,
     "cookTime": 15,
     "servings": "4",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Quinoa and Veggie Stuffed Peppers",
-    "imageUrl": "https://i.imgur.com/eYmG5OS.jpg",
+    "imageUrl": "https://i.imgur.com/NSKK9mG.jpg",
     "prepTime": 20,
     "cookTime": 50,
     "servings": "6",
@@ -37,11 +37,37 @@
   },
   {
     "name": "Grilled Chicken and Vegetable Skewers",
-    "imageUrl": "https://i.imgur.com/O6WmGmB.png",
+    "imageUrl": "https://i.imgur.com/eNwnKuQ.jpg",
     "prepTime": 20,
     "cookTime": 15,
     "servings": "4",
     "ingredients": "4 chicken breasts, 2 bell peppers, 1 red onion, 1 zucchini, 1/4 cup olive oil, 1/4 cup balsamic vinegar, 1 tsp garlic powder, 1 tsp dried oregano, salt and pepper to taste",
     "instructions": "1. Preheat grill to medium-high heat.\n2. Cut chicken breasts into bite-sized pieces.\n3. Cut bell peppers, red onion, and zucchini into bite-sized pieces.\n4. Thread chicken and vegetables onto skewers.\n5. In a small bowl, whisk together olive oil, balsamic vinegar, garlic powder, oregano, salt, and pepper.\n6. Brush skewers with the olive oil mixture.\n7. Grill skewers for 10-15 minutes, or until chicken is cooked through and vegetables are tender.\n8. Serve hot."
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "imageUrl": "https://i.imgur.com/UEwLg0U.jpg",
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": "4",
+    "ingredients": [
+      "1 pound spaghetti",
+      "6 ounces pancetta or bacon, diced",
+      "4 large eggs",
+      "1 cup freshly grated Pecorino Romano cheese",
+      "1/4 cup freshly grated Parmesan cheese",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon freshly ground black pepper",
+      "2 tablespoons chopped fresh parsley, for garnish"
+    ],
+    "instructions": [
+      "1. Bring a large pot of salted water to a boil. Add spaghetti and cook according to package instructions until al dente.",
+      "2. While the pasta is cooking, heat a large skillet over medium heat. Add pancetta or bacon and cook until crisp and browned, stirring occasionally, about 8-10 minutes. Use a slotted spoon to transfer the pancetta to a plate and set aside.",
+      "3. In a medium bowl, whisk together the eggs, Pecorino Romano cheese, Parmesan cheese, salt, and pepper.",
+      "4. Drain the spaghetti, reserving 1 cup of the pasta cooking water.",
+      "5. Add the spaghetti to the skillet with the pancetta or bacon and toss to combine. Remove the skillet from the heat.",
+      "6. Add the egg and cheese mixture to the skillet and toss quickly to combine. The heat from the pasta will cook the eggs and create a creamy sauce. If the pasta seems dry, add a splash of the reserved pasta cooking water and toss to combine.",
+      "7. Divide the spaghetti carbonara among four serving plates. Garnish with chopped parsley and additional grated cheese, if desired. Serve immediately."
+    ]
   }
 ]
