@@ -94,7 +94,11 @@ const Recipe = ({ data }: Props) => {
               </p>
             </div>
             <Image
-              src={data.imageUrl}
+              src={
+                !data.imageUrl
+                  ? "https://i.imgur.com/W8P4PhE.jpg"
+                  : data.imageUrl
+              }
               alt={data.name}
               style={{ objectFit: "cover", borderRadius: "10px" }}
               width={400}

@@ -30,7 +30,11 @@ const Index = ({ data }: Recipes) => {
               <h1 className="index__recipe-card-title">{recipe.name}</h1>
               <Link href={`/${recipe._id}`}>
                 <Image
-                  src={recipe.imageUrl}
+                  src={
+                    !recipe.imageUrl
+                      ? "https://i.imgur.com/W8P4PhE.jpg"
+                      : recipe.imageUrl
+                  }
                   alt={recipe.name}
                   style={{ objectFit: "cover", borderRadius: "10px" }}
                   width={400}
