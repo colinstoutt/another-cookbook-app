@@ -9,7 +9,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Head>
-        <title>Note App</title>
+        <title>Cookbook Application</title>
       </Head>
       <Navbar />
       {children}
