@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import config from "@/config/config";
 import { GetServerSideProps } from "next";
+import { CircularProgress } from "@mui/material";
 // import { Formik, Form } from "formik";
 // import IngredientInputs from "@/components/IngredientInputs";
 // import InstructionInputs from "@/components/InstructionInputs";
@@ -91,7 +92,9 @@ const EditRecipe = ({ data }: Props) => {
         <h1 className="heading">Edit Recipe</h1>
         <div className="line-divide"></div>
         {isSubmitting ? (
-          <h1>Loading...</h1>
+          <h1 className="loader">
+            <CircularProgress sx={{ color: "rgb(255, 185, 55)" }} />
+          </h1>
         ) : (
           <form onSubmit={handleSubmit}>
             <label>What are you making?</label>

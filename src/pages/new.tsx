@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { CircularProgress } from "@mui/material";
 
 const AddRecipe = () => {
   const router = useRouter();
@@ -64,7 +65,9 @@ const AddRecipe = () => {
         <h1 className="heading">Add Recipe</h1>
         <div className="line-divide"></div>
         {isSubmitting ? (
-          <h1>Loading...</h1>
+          <h1 className="loader">
+            <CircularProgress sx={{ color: "rgb(255, 185, 55)" }} />
+          </h1>
         ) : (
           <form onSubmit={handleSubmit}>
             <label>What are you making?</label>

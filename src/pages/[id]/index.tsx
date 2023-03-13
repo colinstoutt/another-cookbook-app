@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
+import { CircularProgress } from "@mui/material";
 
 interface Props {
   data: {
@@ -76,7 +77,9 @@ const Recipe = ({ data }: Props) => {
   return (
     <div className="show-recipe">
       {isDeleting ? (
-        <h1>Loading...</h1>
+        <h1 className="loader">
+          <CircularProgress sx={{ color: "rgb(255, 185, 55)" }} />
+        </h1>
       ) : (
         <>
           <p className="heading">{data.name}</p>

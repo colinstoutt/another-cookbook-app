@@ -39,3 +39,10 @@ video {
   border: 1px solid rgba(0, 0, 0, 0.045);
   margin-bottom: 1.5rem;
 }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding-top: 15rem;
+}
