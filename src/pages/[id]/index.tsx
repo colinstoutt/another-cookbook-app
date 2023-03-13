@@ -34,9 +34,12 @@ const Recipe = ({ data }: Props) => {
   const deleteRecipe = async () => {
     const recipeId = router.query.id;
     try {
-      await fetch(`http://localhost:3000/api/recipes/${recipeId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://next-js-ts-cookbook.vercel.app/api/recipes/${recipeId}`,
+        {
+          method: "DELETE",
+        }
+      );
       router.push("/");
     } catch (error) {
       console.log(error);
@@ -53,8 +56,18 @@ const Recipe = ({ data }: Props) => {
       <div className="show-recipe__confirm">
         <h1>Are you sure?</h1>
         <div className="show-recipe__confirm-btns">
-          <button className='show-recipe__confirm-btns-cancel' onClick={() => setConfirm(false)}>Cancel</button>
-          <button className='show-recipe__confirm-btns-delete' onClick={handleDelete}>Delete</button>
+          <button
+            className="show-recipe__confirm-btns-cancel"
+            onClick={() => setConfirm(false)}
+          >
+            Cancel
+          </button>
+          <button
+            className="show-recipe__confirm-btns-delete"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
         </div>
       </div>
     );

@@ -22,7 +22,7 @@ const AddRecipe = () => {
 
   const createRecipe = async () => {
     try {
-      await fetch("http://localhost:3000/api/recipes", {
+      await fetch("https://next-js-ts-cookbook.vercel.app/api/recipes", {
         method: "POST",
         headers: {
           Accept: "application/json",

@@ -47,14 +47,17 @@ const EditRecipe = ({ data }: Props) => {
     const recipeId = router.query.id;
 
     try {
-      await fetch(`http://localhost:3000/api/recipes/${recipeId}`, {
-        method: "PUT",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      await fetch(
+        `https://next-js-ts-cookbook.vercel.app/api/recipes/${recipeId}`,
+        {
+          method: "PUT",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
       console.log(form);
       router.push("/");
     } catch (error) {
