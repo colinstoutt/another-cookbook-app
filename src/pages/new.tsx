@@ -68,6 +68,8 @@ const AddRecipe = () => {
         ) : (
           <form onSubmit={handleSubmit}>
             <label>What are you making?</label>
+            <br />
+
             <input
               className="add-recipe__input"
               type="text"
