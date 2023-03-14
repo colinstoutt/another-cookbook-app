@@ -69,7 +69,7 @@ const AddRecipe = () => {
             <CircularProgress sx={{ color: "rgb(255, 185, 55)" }} />
           </h1>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form className="add-recipe__form" onSubmit={handleSubmit}>
             <label>What are you making?</label>
             <br />
 
@@ -85,7 +85,7 @@ const AddRecipe = () => {
             <br />
             <input
               className="add-recipe__input"
-              type="text"
+              type="url"
               name="imageUrl"
               onChange={handleChange}
             />
