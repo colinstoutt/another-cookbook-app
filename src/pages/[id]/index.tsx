@@ -78,7 +78,7 @@ const Recipe = ({ data }: Props) => {
   return (
     <div className="show-recipe">
       {isDeleting ? (
-        <h1 className="loader">
+        <h1 className="show__loader">
           <CircularProgress sx={{ color: "rgb(255, 185, 55)" }} />
         </h1>
       ) : (

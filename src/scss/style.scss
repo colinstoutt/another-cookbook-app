@@ -46,3 +46,14 @@ video {
   height: 10vh;
   padding-top: 15rem;
 }
+
+@media screen and (min-width: 900px) {
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding-top: 15rem;
+    margin-bottom: 15rem;
+  }
+}

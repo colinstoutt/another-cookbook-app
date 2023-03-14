@@ -87,7 +87,14 @@
     }
   }
 }
-
+.show__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding-top: 15rem;
+  margin-bottom: 15rem;
+}
 span {
   font-weight: 400;
 }
