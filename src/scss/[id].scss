@@ -29,19 +29,39 @@
   }
   &__serves {
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
   &__confirm {
-    margin: 1rem 0 6rem 0;
+    margin: 1rem 0 0 0;
   }
   &__delete {
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     background-color: rgb(232, 82, 82);
     color: white;
     border: none;
     padding: 0.2rem 1rem;
-    margin-top: 1rem;
+    margin-top: 5px;
     border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__edit {
+    display: block;
+    border: none;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    background-color: rgb(0, 147, 232);
+    color: white;
+    margin-top: 1.5rem;
+    text-decoration: underline solid rgb(0, 147, 232);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__confirm-heading {
+    margin-top: -0.5rem;
   }
   &__confirm-btns {
     &-cancel {
@@ -50,8 +70,10 @@
       border-radius: 5px;
       background-color: rgb(163, 163, 163);
       color: white;
-
-      margin: 5px 5px 0 0;
+      margin: 5px 0 0 0;
+      &:hover {
+        cursor: pointer;
+      }
     }
     &-delete {
       border: none;
@@ -59,6 +81,9 @@
       border-radius: 5px;
       background-color: rgb(232, 82, 82);
       color: white;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { CircularProgress } from "@mui/material";
+import Link from "next/link";
 
 interface Props {
   data: {
@@ -55,7 +56,7 @@ const Recipe = ({ data }: Props) => {
   const ConfirmWindow = () => {
     return (
       <div className="show-recipe__confirm">
-        <h1>Are you sure?</h1>
+        <h1 className="show-recipe__confirm-heading">Are you sure?</h1>
         <div className="show-recipe__confirm-btns">
           <button
             className="show-recipe__confirm-btns-cancel"
@@ -110,6 +111,7 @@ const Recipe = ({ data }: Props) => {
           <p className="show-recipe__p">{data.ingredients}</p>
           <h1 className="show-recipe__subheading">Instructions</h1>
           <p className="show-recipe__p">{data.instructions}</p>
+
           {data.servings ? (
             <p className="show-recipe__serves">
               Serves: <span>{data.servings}</span>
@@ -117,6 +119,9 @@ const Recipe = ({ data }: Props) => {
           ) : (
             <></>
           )}
+          <Link href={`/${data._id}/edit`}>
+            <button className="show-recipe__edit">Edit</button>
+          </Link>
           {!confirm ? (
             <button
               className="show-recipe__delete"

@@ -98,6 +98,7 @@ const EditRecipe = ({ data }: Props) => {
         ) : (
           <form onSubmit={handleSubmit}>
             <label>What are you making?</label>
+            <br />
             <input
               className="add-recipe__input"
               type="text"
@@ -183,28 +184,6 @@ const EditRecipe = ({ data }: Props) => {
     </div>
   );
 };
-
-// export async function getServerSideProps({ query: { id } }: queryId) {
-//   const res = await fetch(
-//     `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
-//   );
-//   const { data } = await res.json();
-//   return { props: { data } };
-// }
-// export const getServerSideProps: GetServerSideProps = async ({
-//   query: { id },
-// }: queryId) => {
-//   try {
-//     const res = await fetch(
-//       "https://next-js-ts-cookbook.vercel.app/api/recipes/"
-//     );
-//     const { data } = await res.json();
-//     return { props: { data } };
-//   } catch (error) {
-//     console.log(error);
-//     return { props: { data: null } };
-//   }
-// };
 
 export const getServerSideProps: GetServerSideProps<
   Props,
