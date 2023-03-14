@@ -23,31 +23,33 @@ const Index = ({ data }: Recipes) => {
     <div className="index">
       <h1 className="heading index__heading">My Recipes</h1>
       <div className="line-divide"></div>
-      <div className="index__recipes">
-        {data.map((recipe) => {
-          return (
-            <div className="index__recipe-card" key={recipe._id}>
-              <h1 className="index__recipe-card-title">{recipe.name}</h1>
-              <Link href={`/${recipe._id}`}>
-                <Image
-                  src={
-                    !recipe.imageUrl
-                      ? "https://i.imgur.com/W8P4PhE.jpg"
-                      : recipe.imageUrl
-                  }
-                  alt={recipe.name}
-                  style={{ objectFit: "cover", borderRadius: "10px" }}
-                  width={400}
-                  height={200}
-                  priority
-                />
-              </Link>
-              <Link href={`/${recipe._id}/edit`}>
-                <button className="index__edit">Edit</button>
-              </Link>
-            </div>
-          );
-        })}
+      <div className="index__recipes-container">
+        <div className="index__recipes">
+          {data.map((recipe) => {
+            return (
+              <div className="index__recipe-card" key={recipe._id}>
+                <h1 className="index__recipe-card-title">{recipe.name}</h1>
+                <Link href={`/${recipe._id}`}>
+                  <Image
+                    src={
+                      !recipe.imageUrl
+                        ? "https://i.imgur.com/W8P4PhE.jpg"
+                        : recipe.imageUrl
+                    }
+                    alt={recipe.name}
+                    priority={true}
+                    width={400}
+                    height={200}
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "10px",
+                    }}
+                  />
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
