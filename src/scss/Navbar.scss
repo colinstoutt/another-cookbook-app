@@ -58,7 +58,7 @@
     }
   }
   &__desktop {
-    display: none;
+    visibility: hidden;
     &-link {
       display: none;
     }
@@ -69,6 +69,7 @@
   .nav {
     padding: 1rem 3rem;
     &__desktop {
+      visibility: visible;
       display: flex;
       font-size: 1.2rem;
       padding: 0.3rem 1rem;
