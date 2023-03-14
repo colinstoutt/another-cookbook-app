@@ -74,14 +74,14 @@ const EditRecipe = ({ data }: Props) => {
       [e.target.name]: e.target.value,
     }));
   };
-  //   const handleChangeTextarea = (
-  //     e: React.ChangeEvent<HTMLTextAreaElement>
-  //   ): void => {
-  //     setForm((prev) => ({
-  //       ...prev,
-  //       [e.target.name]: e.target.value,
-  //     }));
-  //   };
+  const handleChangeTextarea = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <div className="add-recipe">
@@ -154,21 +154,21 @@ const EditRecipe = ({ data }: Props) => {
             <br />
             <label>Ingredients</label>
             <br />
-            <input
+            <textarea
               className="add-recipe__input"
               name="ingredients"
               value={form.ingredients}
-              onChange={handleChange}
+              onChange={handleChangeTextarea}
               required
             />
             <br />
             <label>Instructions</label>
             <br />
-            <input
+            <textarea
               className="add-recipe__input"
               name="instructions"
               value={form.instructions}
-              onChange={handleChange}
+              onChange={handleChangeTextarea}
               required
             />
             <br />
