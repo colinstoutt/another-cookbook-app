@@ -57,17 +57,28 @@ const Navbar: React.FC = () => {
             className="nav__icon"
           />
         </Link>
+        <div className="nav__desktop">
+          <Link className="nav__desktop-link" href="/">
+            <h1>Home</h1>
+          </Link>
+          <Link className="nav__desktop-link" href="/new">
+            <h1>Add Recipe</h1>
+          </Link>
+          <Link className="nav__desktop-link" href="/discover">
+            <h1>Find Recipes</h1>
+          </Link>
+        </div>
         {!toggleMenu ? (
           <MenuRoundedIcon
             onClick={handleToggleMenu}
             style={{ fontSize: "3rem", color: "white" }}
-            className="nav__icon"
+            className="nav__menu-icon"
           />
         ) : (
           <ClearRoundedIcon
             onClick={handleToggleMenu}
             style={{ fontSize: "3rem", color: "white" }}
-            className="nav__icon"
+            className="nav__menu-icon"
           />
         )}
       </nav>

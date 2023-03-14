@@ -1,4 +1,6 @@
 .nav {
+  min-width: 375px;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -53,6 +55,33 @@
   &__icon {
     &:hover {
       cursor: pointer;
+    }
+  }
+  &__desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nav {
+    padding: 1rem 3rem;
+    &__desktop {
+      display: flex;
+      font-size: 1.2rem;
+      padding: 0.3rem 1rem;
+      border-radius: 10px;
+      gap: 2rem;
+      &-link {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    &__menu-icon {
+      display: none;
     }
   }
 }
