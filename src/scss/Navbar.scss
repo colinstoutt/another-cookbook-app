@@ -56,35 +56,35 @@
       cursor: pointer;
     }
   }
-  &__desktop {
-    display: none;
-    &-link {
-      display: none;
-    }
-  }
+  // &__desktop {
+  //   display: none;
+  //   &-link {
+  //     display: none;
+  //   }
+  // }
 }
 
-@media screen and (min-width: 900px) {
-  .nav {
-    &__desktop {
-      visibility: visible;
-      display: flex;
-      font-size: 1.2rem;
-      padding: 0.3rem 1rem;
-      border-radius: 10px;
-      gap: 2rem;
-      &-link {
-        display: inline-block;
-        text-decoration: none;
-        color: white;
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-    }
-    &__menu-icon {
-      display: none;
-    }
-  }
-}
+// @media screen and (min-width: 900px) {
+//   .nav {
+//     &__desktop {
+//       visibility: visible;
+//       display: flex;
+//       font-size: 1.2rem;
+//       padding: 0.3rem 1rem;
+//       border-radius: 10px;
+//       gap: 2rem;
+//       &-link {
+//         display: inline-block;
+//         text-decoration: none;
+//         color: white;
+//         &:hover {
+//           text-decoration: underline;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//     &__menu-icon {
+//       display: none;
+//     }
+//   }
+// }

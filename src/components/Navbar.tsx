@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             className="nav__icon"
           />
         </Link>
-        <div className="nav__desktop">
+        {/* <div className="nav__desktop">
           <Link className="nav__desktop-link" href="/">
             <h1>Home</h1>
           </Link>
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           <Link className="nav__desktop-link" href="/discover">
             <h1>Find Recipes</h1>
           </Link>
-        </div>
+        </div> */}
         {!toggleMenu ? (
           <MenuRoundedIcon
             onClick={handleToggleMenu}
