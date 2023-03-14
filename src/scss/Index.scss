@@ -4,21 +4,21 @@
   font-weight: 300;
 
   &__recipes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    grid-gap: 16px;
     justify-content: center;
-    gap: 3rem;
+    padding: initial;
   }
 
   &__recipe-card {
     position: relative;
     font-size: 1.2rem;
     font-weight: 300;
-    background-color: white;
-    height: 12rem;
     max-width: 330px;
     border-radius: 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin-bottom: 1.5rem;
 
     &-title {
       position: absolute;
