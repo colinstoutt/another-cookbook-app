@@ -59,6 +59,9 @@
   }
   &__desktop {
     display: none;
+    &-link {
+      display: none;
+    }
   }
 }
 
@@ -72,6 +75,7 @@
       border-radius: 10px;
       gap: 2rem;
       &-link {
+        display: inline-block;
         text-decoration: none;
         color: white;
         &:hover {
