@@ -23,7 +23,7 @@ https://trello.com/b/FTE8esrG/cookbook
 
 ## Future Enhancements
 
-Modify the model and form so the ingredients and instructions display in a list. A pin feature so a user can keep their favorites at the top of the list. Need to complete the discover page so users can find other recipes. Authetication. Maybe some branding.
+Modify the model and form so the ingredients and instructions display in a list. Fix image rendering issues. A pin feature so a user can keep their favorites at the top of the list. Need to complete the discover page so users can find other recipes. Authetication. Maybe some branding.
 
 ## Wireframes
 <img src="https://user-images.githubusercontent.com/97377111/225162535-99f01fff-3216-48bd-98df-452be750e6e1.png" width="50%" height="50%" >
