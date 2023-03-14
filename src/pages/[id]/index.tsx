@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { CircularProgress } from "@mui/material";
 import Link from "next/link";
-import config from "@/config/config";
 
 interface Props {
   data: {
@@ -37,9 +36,12 @@ const Recipe = ({ data }: Props) => {
   const deleteRecipe = async () => {
     const recipeId = router.query.id;
     try {
-      await fetch(`${config.DEV}${recipeId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://next-js-ts-cookbook.vercel.app/api/recipes/${recipeId}`,
+        {
+          method: "DELETE",
+        }
+      );
       router.push("/");
     } catch (error) {
       console.log(error);
@@ -142,7 +144,9 @@ export const getServerSideProps: GetServerSideProps<
 > = async ({ query }) => {
   const { id } = query;
   try {
-    const res = await fetch(`${config.DEV}${id}`);
+    const res = await fetch(
+      `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
+    );
     const { data } = await res.json();
     return { props: { data } };
   } catch (error) {

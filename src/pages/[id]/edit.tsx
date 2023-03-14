@@ -45,14 +45,17 @@ const EditRecipe = ({ data }: Props) => {
     const recipeId = router.query.id;
 
     try {
-      await fetch(`${config.DEV}${recipeId}`, {
-        method: "PUT",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      await fetch(
+        `https://next-js-ts-cookbook.vercel.app/api/recipes/${recipeId}`,
+        {
+          method: "PUT",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
       console.log(form);
       router.push("/");
     } catch (error) {
@@ -185,7 +188,9 @@ export const getServerSideProps: GetServerSideProps<
 > = async ({ query }) => {
   const { id } = query;
   try {
-    const res = await fetch(`${config.DEV}${id}`);
+    const res = await fetch(
+      `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
+    );
     const { data } = await res.json();
     return { props: { data } };
   } catch (error) {

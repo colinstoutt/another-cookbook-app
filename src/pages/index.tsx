@@ -57,7 +57,9 @@ const Index = ({ data }: Recipes) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await fetch(config.DEV);
+    const res = await fetch(
+      "https://next-js-ts-cookbook.vercel.app/api/recipes/"
+    );
     const { data } = await res.json();
     return { props: { data } };
   } catch (error) {
