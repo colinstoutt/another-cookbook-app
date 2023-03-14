@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { CircularProgress } from "@mui/material";
+import config from "@/config/config";
 
 const AddRecipe = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const AddRecipe = () => {
 
   const createRecipe = async () => {
     try {
-      await fetch("https://next-js-ts-cookbook.vercel.app/api/recipes", {
+      await fetch(config.DEV, {
         method: "POST",
         headers: {
           Accept: "application/json",

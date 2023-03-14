@@ -3,9 +3,6 @@ import { useRouter } from "next/router";
 import config from "@/config/config";
 import { GetServerSideProps } from "next";
 import { CircularProgress } from "@mui/material";
-// import { Formik, Form } from "formik";
-// import IngredientInputs from "@/components/IngredientInputs";
-// import InstructionInputs from "@/components/InstructionInputs";
 
 interface Props {
   data: {
@@ -48,17 +45,14 @@ const EditRecipe = ({ data }: Props) => {
     const recipeId = router.query.id;
 
     try {
-      await fetch(
-        `https://next-js-ts-cookbook.vercel.app/api/recipes/${recipeId}`,
-        {
-          method: "PUT",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        }
-      );
+      await fetch(`${config.DEV}${recipeId}`, {
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
       console.log(form);
       router.push("/");
     } catch (error) {
@@ -191,9 +185,7 @@ export const getServerSideProps: GetServerSideProps<
 > = async ({ query }) => {
   const { id } = query;
   try {
-    const res = await fetch(
-      `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
-    );
+    const res = await fetch(`${config.DEV}${id}`);
     const { data } = await res.json();
     return { props: { data } };
   } catch (error) {
