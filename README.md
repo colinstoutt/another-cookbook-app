@@ -24,7 +24,7 @@ https://trello.com/b/FTE8esrG/cookbook
 ## Future Enhancements
 
 - Modify the model and form so the ingredients and instructions display in a list. 
-- Fix rendering issues. 
+- Fix image rendering issues. 
 - A pin feature so a user can keep their favorites at the top of the list. 
 - Find a way to incorporate calories in the model. 
 - Need to complete the discover page so users can find other recipes. 
