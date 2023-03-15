@@ -1,4 +1,4 @@
-# Cookbook Application
+# NextJs Cookbook Application
 
 This app is designed to allow users to easily create, save, edit, and delete their own recipes. Users can enter recipe details such as name, ingredients, and instructions. Once saved, the app stores the recipe for easy access and management.
 
