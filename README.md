@@ -2,8 +2,8 @@
 
 This app is designed to allow users to easily create, save, edit, and delete their own recipes. Users can enter recipe details such as name, ingredients, and instructions. Once saved, the app stores the recipe for easy access and management.
 
-<img src="https://user-images.githubusercontent.com/97377111/225162443-c3a4259d-8bec-4090-9b86-60f7433bdf5e.png" width="35%" height="35%" >
-<img src="https://user-images.githubusercontent.com/97377111/225191223-d0318d46-a994-45dc-b8f5-e096b8371eb8.png" width="35%" height="35%" >
+<img src="https://user-images.githubusercontent.com/97377111/225162443-c3a4259d-8bec-4090-9b86-60f7433bdf5e.png" width="35%" height="35%" ><img src="https://user-images.githubusercontent.com/97377111/225191223-d0318d46-a994-45dc-b8f5-e096b8371eb8.png" width="35%" height="35%" >
+
 
 ## Live Link
 
