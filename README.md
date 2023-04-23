@@ -12,6 +12,12 @@ I wanted to build this app primarily so I can learn NextJs and begin understandi
 
 https://capstone-cookbook-application.netlify.app/
 
+## Getting Started 
+
+This web application is deployed using Netlify and Vercel. To use the app, simply click on the live link provided above.
+
+Please note that this app is currently in demo mode and does not require authentication. This means that you can view and use all features of the app without needing to create an account or log in. 
+
 ## Technology Used
 
 - NextJs
