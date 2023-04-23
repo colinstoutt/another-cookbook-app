@@ -1,12 +1,8 @@
 # Nextjs Recipe Book
 
-This app is designed to allow users to easily create, save, edit, and delete their own recipes. Users can enter recipe details such as name, ingredients, and instructions. Once saved, the app stores the recipe for easy access and management.
+This mobile web application provides a user-friendly interface for easily creating, saving, editing, and deleting your own recipes. With this app, you can enter recipe details such as name, ingredients, and instructions, and the app will store the recipe for easy access and management.
 
-I wanted to build this app primarily so I can learn NextJs and begin understanding Typescript.
-
-<img src="https://user-images.githubusercontent.com/97377111/225162443-c3a4259d-8bec-4090-9b86-60f7433bdf5e.png" width="35%" height="35%" >          <img src="https://user-images.githubusercontent.com/97377111/225191703-9bd05022-8000-4715-bd37-d8196de31d01.png" width="35%" height="35%" >
-
-
+<img src="https://user-images.githubusercontent.com/97377111/225162443-c3a4259d-8bec-4090-9b86-60f7433bdf5e.png" width="25%" height="25%" >          <img src="https://user-images.githubusercontent.com/97377111/225191703-9bd05022-8000-4715-bd37-d8196de31d01.png" width="25%" height="25%" >
 
 ## Live Link
 
