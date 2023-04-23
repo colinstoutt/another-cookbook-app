@@ -6,7 +6,7 @@ This mobile web application provides a user-friendly interface for easily creati
 
 ## Live Link
 
-https://capstone-cookbook-application.netlify.app/
+https://cookbook-application-demo.netlify.app
 
 ## Getting Started 
 
