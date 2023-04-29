@@ -81,7 +81,7 @@ const AddRecipe = () => {
               required
             />
             <br />
-            <label>Image (url)</label>
+            <label>Image (url) (optional)</label>
             <br />
             <input
               className="add-recipe__input"
