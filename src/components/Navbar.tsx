@@ -4,7 +4,6 @@ import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import SegmentRoundedIcon from "@mui/icons-material/SegmentRounded";
-
 import Link from "next/link";
 import { useState } from "react";
 
@@ -34,7 +33,7 @@ const Navbar: React.FC = () => {
             Add Recipe
           </Link>
         </li>
-        <li className="nav__li">
+        {/* <li className="nav__li">
           <Link
             onClick={handleToggleMenu}
             className="nav__menu-link"
@@ -43,7 +42,7 @@ const Navbar: React.FC = () => {
             <SearchRoundedIcon style={{ fontSize: "2rem" }} />
             Find Recipes
           </Link>
-        </li>
+        </li> */}
       </ul>
     );
   };
