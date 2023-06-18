@@ -15,12 +15,6 @@ const AddRecipe = () => {
     instructions: "",
   });
 
-  useEffect(() => {
-    if (isSubmitting) {
-      createRecipe();
-    }
-  }, [isSubmitting]);
-
   const createRecipe = async () => {
     try {
       await fetch("https://next-js-ts-cookbook.vercel.app/api/recipes", {
@@ -38,9 +32,10 @@ const AddRecipe = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    await createRecipe();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {

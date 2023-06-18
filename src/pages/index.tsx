@@ -1,7 +1,5 @@
 import Link from "next/link";
-import config from "../config/config";
 import Image from "next/image";
-import { useEffect } from "react";
 import { GetServerSideProps } from "next";
 
 interface Recipes {

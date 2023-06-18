@@ -6,6 +6,7 @@ import { CircularProgress } from "@mui/material";
 import Link from "next/link";
 
 interface Props {
+  // defining the shape of the data prop
   data: {
     _id: string;
     name: string;
@@ -17,21 +18,18 @@ interface Props {
     instructions: string;
   };
 }
+// defining query type
 type QueryParams = {
   id: string;
 };
 
 const Recipe = ({ data }: Props) => {
+  // receiving the data prop^
+  // giving the user a chance to confirm their decision to delete.
   const [confirm, setConfirm] = useState(false);
+  // isDeleting = true will set off the <CircularProgress/> loader component
   const [isDeleting, setIsDeleting] = useState(false);
   const router = useRouter();
-  console.log(data);
-
-  useEffect(() => {
-    if (isDeleting) {
-      deleteRecipe();
-    }
-  }, [isDeleting]);
 
   const deleteRecipe = async () => {
     const recipeId = router.query.id;
@@ -48,9 +46,11 @@ const Recipe = ({ data }: Props) => {
     }
   };
 
+  // async function to handle the deletion of a recipe
   const handleDelete = async () => {
     setIsDeleting(true);
     setConfirm(false);
+    await deleteRecipe();
   };
 
   const ConfirmWindow = () => {
@@ -138,9 +138,11 @@ const Recipe = ({ data }: Props) => {
   );
 };
 
+// fetching data on the server and passing it as props
 export const getServerSideProps: GetServerSideProps<
   Props,
   QueryParams
+  // accesing the query object from getServerSideProps function to get the recipe ID required for fetching data.
 > = async ({ query }) => {
   const { id } = query;
   try {
@@ -148,6 +150,7 @@ export const getServerSideProps: GetServerSideProps<
       `https://next-js-ts-cookbook.vercel.app/api/recipes/${id}`
     );
     const { data } = await res.json();
+    // data is returned as props
     return { props: { data } };
   } catch (error) {
     console.log(error);

@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-import config from "@/config/config";
 import { GetServerSideProps } from "next";
 import { CircularProgress } from "@mui/material";
 
@@ -35,12 +34,6 @@ const EditRecipe = ({ data }: Props) => {
     calPerServing: data.calPerServing,
   });
 
-  useEffect(() => {
-    if (isSubmitting) {
-      updateRecipe();
-    }
-  }, [isSubmitting]);
-
   const updateRecipe = async () => {
     const recipeId = router.query.id;
 
@@ -63,11 +56,13 @@ const EditRecipe = ({ data }: Props) => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    await updateRecipe();
   };
 
+  // void - the function will not return a value, undefined.
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setForm((prev) => ({
       ...prev,

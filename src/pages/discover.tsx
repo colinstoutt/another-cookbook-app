@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const discover = () => {
-  return <div>discover</div>;
-};
+// const discover = () => {
+//   return <div>discover</div>;
+// };
 
-export default discover;
+// export default discover;
